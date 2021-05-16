@@ -1,40 +1,17 @@
-# FSA-Net
+# Emotion-Recognition-and-Head-pose-estimation-of-presidential-candidates
+## person identification => (1) FSA-Net을 통한 head pose estimation (2)VGG tranfer learning을 통한 Emotion recognition
+
+> 대선토론 영상을 분석하여 의미 있는 데이터를 수집
+Ex) 출연 비중, 후보자 간의 상호작용, 감정, 자세 
+
+
+## 동작 알고리즘
+![image](https://user-images.githubusercontent.com/46091177/118411294-bf10ce80-b6ce-11eb-9b30-91d68fde3aa0.png)
+
+## (1)FSA-Net을 통한 head pose estimation 
+
 **[CVPR19] FSA-Net: Learning Fine-Grained Structure Aggregation for Head Pose Estimation from a Single Image**
-
 **Code Author: Tsun-Yi Yang**
-
-**\[Updates\]**
- - `2019/10/06`: Big thanks to [Kapil Sachdeva](https://github.com/ksachdeva) again!!! The keras Lambda layers are replaced, and converted [tf frozen models](https://github.com/shamangary/FSA-Net/tree/master/pre-trained/converted-models) are supported!
- - `2019/09/27`: Refactoring the model code. Very beautiful and concise codes contributed by [Kapil Sachdeva](https://github.com/ksachdeva).
- - `2019/08/30`: Demo update! Robust and fast SSD face detector added!
-
-
-
-### Comparison video
-(Baseline **Hopenet:** https://github.com/natanielruiz/deep-head-pose)
-<img src="https://github.com/shamangary/FSA-Net/blob/master/Compare_AFLW2000_gt_Hopenet_FSA.gif" height="320"/>
-
-### (New!!!) Fast and robust demo with SSD face detector (2019/08/30)
-<img src="https://github.com/shamangary/FSA-Net/blob/master/FSA_SSD_demo.gif" height="300"/>
-
-### Webcam demo
-
-| Signle person (LBP) | Multiple people (MTCNN)|
-| --- | --- |
-| <img src="https://github.com/shamangary/FSA-Net/blob/master/webcam_demo.gif" height="220"/> | <img src="https://github.com/shamangary/FSA-Net/blob/master/webcam_demo_cvlab_citi.gif" height="220"/> |
-
-
-| Time sequence | Fine-grained structure|
-| --- | --- |
-| <img src="https://github.com/shamangary/FSA-Net/blob/master/time_demo.png" height="160"/> | <img src="https://github.com/shamangary/FSA-Net/blob/master/heatmap_demo.png" height="330"/> |
-
-
-
-### Results
-<img src="https://github.com/shamangary/FSA-Net/blob/master/FSANET_table1.png" height="220"/><img src="https://github.com/shamangary/FSA-Net/blob/master/FSANET_table2.png" height="220"/><img src="https://github.com/shamangary/FSA-Net/blob/master/FSANET_table3.png" height="220"/>
-
-
-## Paper
 
 
 ### PDF
