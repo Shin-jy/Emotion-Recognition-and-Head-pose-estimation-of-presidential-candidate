@@ -9,18 +9,27 @@ Ex) 출연 비중, 후보자 간의 상호작용, 감정, 자세
 ![image](https://user-images.githubusercontent.com/46091177/118411294-bf10ce80-b6ce-11eb-9b30-91d68fde3aa0.png)
 
 ## (1)FSA-Net을 통한 head pose estimation 
-
+```
+# MTCNN face detector (slow but accurate)
+cd demo
+sh run_demo_FSANET_mtcnn.sh 
+=> Jy_demo_FSANET_mtcnn.py 실행
+# SSD face detector (fast and accurate)
+cd demo
+sh run_demo_FSANET_ssd.sh
+=> Jy_demo_FSANET.py 실행
+```
 **[CVPR19] FSA-Net: Learning Fine-Grained Structure Aggregation for Head Pose Estimation from a Single Image**
 **Code Author: Tsun-Yi Yang**
+
+## 사람 인식 알고리즘과 (2)감정인식 알고리즘은 차후 추가할 예정
 
 
 ### PDF
 https://github.com/shamangary/FSA-Net/blob/master/0191.pdf
 
-
 ### Paper authors
 **[Tsun-Yi Yang](https://scholar.google.com/citations?user=WhISCE4AAAAJ&hl=en), [Yi-Ting Chen](https://sites.google.com/media.ee.ntu.edu.tw/yitingchen/), [Yen-Yu Lin](https://www.citi.sinica.edu.tw/pages/yylin/index_zh.html), and [Yung-Yu Chuang](https://www.csie.ntu.edu.tw/~cyy/)**
-
 
 ## Abstract
 This paper proposes a method for head pose estimation from a single image. Previous methods often predicts head poses through landmark or depth estimation and would require more computation than necessary. Our method is based on regression and feature aggregation. For having a compact model, we employ the soft stagewise regression scheme. Existing feature aggregation methods treat inputs as a bag of features and thus ignore their spatial relationship in a feature map. We propose to learn a fine-grained structure mapping for spatially grouping features before aggregation. The fine-grained structure provides part-based information and pooled values. By ultilizing learnable and non-learnable importance over the spatial location, different variant models as a complementary ensemble can be generated. Experiments show that out method outperforms the state-of-the-art methods including both the landmark-free ones and the ones based on landmark or depth estimation. Based on a single RGB frame as input, our method even outperforms methods utilizing multi-modality information (RGB-D, RGB-Time) on estimating the yaw angle. Furthermore, the memory overhead of the proposed model is 100× smaller than that of previous methods.
