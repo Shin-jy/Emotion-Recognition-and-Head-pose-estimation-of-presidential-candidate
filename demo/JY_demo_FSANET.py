@@ -3,12 +3,14 @@
 import os
 import cv2
 import sys
+sys.path.append('..')
 import numpy as np
 from math import cos, sin
-from moviepy.editor import *
-from FSANET_model import *
-from moviepy.editor import *
+# from moviepy.editor import *
+from lib.FSANET_model import *
+# from moviepy.editor import *
 from keras import backend as K
+from keras.layers import Average
 
 def draw_axis(img, yaw, pitch, roll, tdx=None, tdy=None, size = 80):
 
@@ -79,10 +81,8 @@ def draw_results(detected,input_img,faces,ad,img_size,img_w,img_h,model,time_det
             
             input_img[yw1:yw2 + 1, xw1:xw2 + 1, :] = img
             
-            cv2.imshow("result", input_img)
-    else:
-        cv2.imshow("result", input_img)
-
+    cv2.imshow("result", input_img)
+    
     return input_img #,time_network,time_plot
 
 def main():
